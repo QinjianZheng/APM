@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { FormsModule } from '@angular/forms';
-import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
-import { StarComponent } from './shared/star/star.component';
+import { ConvertToSpacesPipe } from './shared/pipes/convert-to-spaces.pipe';
+import { StarComponent } from './shared/components/star/star.component';
 
 @NgModule({
   declarations: [
