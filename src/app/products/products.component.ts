@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProduct } from './product';
 
 const IMAGE_WIDTH = 50;
 const IMAGE_MARGIN = 50;
@@ -14,7 +15,7 @@ export class ProductsComponent {
   listFilter = 'cart';
   imageWidth = IMAGE_WIDTH;
   imageMargin = IMAGE_MARGIN;
-  products = [
+  products: IProduct[] = [
     {
       productId: 1,
       productName: 'Leaf Rake',
