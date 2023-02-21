@@ -12,9 +12,26 @@ const IMAGE_MARGIN = 50;
 export class ProductsComponent implements OnInit {
   showImage = true;
   pageTitle = 'Product List';
-  listFilter = 'cart';
   imageWidth = IMAGE_WIDTH;
   imageMargin = IMAGE_MARGIN;
+
+  private _listFilter = '';
+  get listFilter(): string {
+    return this._listFilter;
+  }
+
+  set listFilter(value: string) {
+    this._listFilter = value;
+  }
+
+  get filteredProducts(): IProduct[] {
+    return this.products.filter((p) =>
+      p.productName
+        .toLocaleLowerCase()
+        .includes(this.listFilter.toLocaleLowerCase())
+    );
+  }
+
   products: IProduct[] = [
     {
       productId: 1,
@@ -44,5 +61,6 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('in Oninit');
+    this.listFilter = 'cart';
   }
 }
