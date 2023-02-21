@@ -49,7 +49,12 @@
         <td>
           {{ product.price | currency : "AUD" : "symbol" : "1.2-2" }}
         </td>
-        <td>{{ product.starRating }}</td>
+        <td>
+          <sfc-star
+            [rating]="product.starRating"
+            (ratingClicked)="onRatingClicked($event)"
+          ></sfc-star>
+        </td>
       </tr>
     </tbody>
   </table>
