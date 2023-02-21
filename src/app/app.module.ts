@@ -16,7 +16,6 @@ import { StarComponent } from './shared/components/star/star.component';
     StarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
