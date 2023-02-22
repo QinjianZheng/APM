@@ -7,7 +7,6 @@ const IMAGE_WIDTH = 50;
 const IMAGE_MARGIN = 50;
 
 @Component({
-  selector: 'sfc-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
 })
