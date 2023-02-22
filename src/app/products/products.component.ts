@@ -18,6 +18,10 @@ export class ProductsComponent implements OnInit, OnDestroy {
   imageWidth = IMAGE_WIDTH;
   imageMargin = IMAGE_MARGIN;
 
+  products: IProduct[] = [];
+  errorMessage = '';
+  sub!: Subscription;
+
   private _listFilter = '';
   get listFilter(): string {
     return this._listFilter;
@@ -34,9 +38,6 @@ export class ProductsComponent implements OnInit, OnDestroy {
         .includes(this.listFilter.toLocaleLowerCase())
     );
   }
-  products: IProduct[] = [];
-  errorMessage = '';
-  sub!: Subscription;
 
   toggleImage() {
     this.showImage = !this.showImage;
